@@ -1,0 +1,14 @@
+{
+  "name": "gw2_website",
+  "version": "1.0.0",
+  "description": "A practice website that allows a user to click on buttons and get game codes copied to their clipboards in game for convenience.",
+  "main": "index.js",
+  "scripts": {
+    "test": "start:dev"
+  },
+  "author": "Robert Schnek",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
