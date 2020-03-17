@@ -4,11 +4,30 @@
   "description": "A practice website that allows a user to click on buttons and get game codes copied to their clipboards in game for convenience.",
   "main": "index.js",
   "scripts": {
-    "test": "start:dev"
+    "start-dev": "NODE_ENV='development' webpack -w & NODE_ENV='development' npm run start-server",
+    "start-server": "nodemon server -e html,js,scss --ignore public --ignore client"
   },
   "author": "Robert Schnek",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1",
+    "nodemon": "^2.0.2",
+    "pg": "^7.18.2",
+    "pg-hstore": "^2.3.3",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-router-dom": "^5.1.2",
+    "sequelize": "^5.21.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/polyfill": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/preset-react": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
   }
 }
