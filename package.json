@@ -4,6 +4,7 @@
   "description": "A practice website that allows a user to click on buttons and get game codes copied to their clipboards in game for convenience.",
   "main": "index.js",
   "scripts": {
+    "seed": "node seed.js",
     "start-dev": "NODE_ENV='development' webpack -w & NODE_ENV='development' npm run start-server",
     "start-server": "nodemon server -e html,js,scss --ignore public --ignore client"
   },

@@ -1,7 +1,12 @@
 const Sequelize = require('sequelize');
-const db = require('../db');
+const db = require('../');
 
 const Nodes = db.define('nodes', {
+    id: {
+        type: Sequelize.INTEGER,
+        primaryKey: true,
+        autoIncrement: false
+    },
     oreType: {
         type: Sequelize.ENUM('Iron', 'Platinum'),
         allowNull: false,
@@ -33,6 +38,9 @@ const Nodes = db.define('nodes', {
     status: {
         type: Sequelize.BOOLEAN,
         defaultValue: false
+    },
+    description: {
+        type: Sequelize.TEXT
     }
 })
 
