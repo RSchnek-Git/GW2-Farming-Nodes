@@ -1,11 +1,11 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {getAllThunk} from '../store/nodes'
+import {getPlatinumThunk} from '../store/nodes'
 import {Link} from 'react-router-dom'
 
 class NodeList extends Component {
     componentDidMount() {
-        this.props.getAllNodes()
+        this.props.getPlatNodes()
     }
 
     render() {
@@ -41,8 +41,8 @@ class NodeList extends Component {
 
 
 const mapDispatchToProps = dispatch => ({
-    getAllNodes: () => {
-        dispatch(getAllThunk())
+    getPlatNodes: () => {
+        dispatch(getPlatinumThunk())
     }
 })
 
@@ -50,6 +50,6 @@ const mapStateToProps = state => ({
     nodes: state.nodes.nodes
 })
 
-const Nodes = connect(mapStateToProps, mapDispatchToProps)(NodeList)
+const PlatNodes = connect(mapStateToProps, mapDispatchToProps)(NodeList)
 
-export default Nodes
+export default PlatNodes

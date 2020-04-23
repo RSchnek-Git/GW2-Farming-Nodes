@@ -12,9 +12,9 @@ router.get('/', async function(req, res, next){
 
 router.get('/iron', async function(req, res, next){
     try {
-        const ironNodes = await Nodes.findall({
+        const ironNodes = await Nodes.findAll({
             where: {
-                oreType: Iron
+                oreType: "Iron"
             }
         })
         res.json(ironNodes)
@@ -25,9 +25,9 @@ router.get('/iron', async function(req, res, next){
 
 router.get('/platinum', async function(req, res, next){
     try {
-        const platNodes = await Nodes.findall({
+        const platNodes = await Nodes.findAll({
             where: {
-                oreType: Platinum
+                oreType: "Platinum"
             }
         })
         res.json(platNodes)
