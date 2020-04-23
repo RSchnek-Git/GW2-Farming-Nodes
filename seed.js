@@ -79,7 +79,7 @@ async function seed() {
             id: 11,
             oreType: "Platinum",
             area: "Timberline Falls",
-            waypoint: "Gentle River Waypoint",
+            waypoint: "Thistlereed Waypoint",
             code: "[&BFECAAA=]"
         }),
         Nodes.create({

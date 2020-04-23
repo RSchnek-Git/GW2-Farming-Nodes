@@ -1,0 +1,19 @@
+a:hover {
+    color: #83d6fc;
+    transform: scale(1.2);
+}
+
+.navlink {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-wrap: wrap;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    border-radius: 20px;
+    align-content: center;
+}

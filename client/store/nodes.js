@@ -75,5 +75,7 @@ export default function(state = initialState, action) {
             return {...state, nodes: action.nodes}
         case GOT_SINGLE_NODE:
             return {...state, selectedNode: action.selectedNode}
+        default:
+            return state
     }
 }
