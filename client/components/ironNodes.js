@@ -4,12 +4,20 @@ import {getIronThunk} from '../store/nodes'
 import {Link} from 'react-router-dom'
 
 class NodeList extends Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            status: this.props.nodes.status
+        }
+    }
+
     componentDidMount() {
         this.props.getIronNodes()
     }
 
     render() {
         const nodes = this.props.nodes
+        const waypointurl = this.state.status ? "waypointT.png" : "waypointF.png"
         return (
             <div>
                 <nav className="sublink">
@@ -27,8 +35,8 @@ class NodeList extends Component {
                     <ol>
                         {nodes.map(node => (
                             <li key={node.id}>
-                                <h4>{node.area} *{node.oreType}*</h4>
-                                <p>{node.waypoint}</p>
+                                <h4>{node.area}</h4>
+                                <p><img src={node.oreType + ".png"} alt={node.oreType} style={{verticalAlign: "middle"}} /> <img src={waypointurl} alt={node.code} style={{verticalAlign: "middle"}} /> {node.waypoint}</p> 
                             </li>
                         ))}
                     </ol>
