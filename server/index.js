@@ -20,8 +20,8 @@ app.listen(port, function(){
 })
 
 //serve up html if none of our routes get used *THIS SHOULD BE AT END OF FILE*
-app.get('*', function(req, res){
-    res.sendFile(path.join(__dirname, '../public'));
+app.get('/*', function(req, res){
+    res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
 //send 500 errors out and show error logs.
