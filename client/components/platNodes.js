@@ -53,7 +53,7 @@ class NodeList extends Component {
                                         alt={node.oreType}
                                         style={{verticalAlign: "middle"}}
                                     /> 
-                                    <img 
+                                    <img className="cursorButton"
                                         src="waypointF.png"
                                         alt={node.code}
                                         style={{verticalAlign: "middle"}}

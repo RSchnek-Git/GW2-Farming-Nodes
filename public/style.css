@@ -17,3 +17,10 @@ nav {
     border-radius: 20px;
     align-content: center;
 }
+
+.cursorButton {
+    background:none;
+    border:none;
+    color:#FFF;
+    cursor:pointer;
+}
