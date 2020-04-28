@@ -5,7 +5,8 @@ const path = require('path');
 const morgan = require('morgan'); //logging middleware
 app.use(morgan('dev')); //app using middleware
 
-app.use(express.static(path.join(__dirname, '..', '/public/index.html')));
+// app.use(express.static(path.join(__dirname, '..', '/public')));
+app.use(express.static('public'));
 
 const bodyParser = require('body-parser'); //allows req.body to be used
 app.use(bodyParser.json()); //can parse json
