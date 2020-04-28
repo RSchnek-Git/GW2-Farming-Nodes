@@ -7,7 +7,7 @@ const morgan = require('morgan'); //logging middleware
 app.use(morgan('dev')); //app using middleware
 
 app.set('view engine', 'ejs');
-app.use(express.static(path.join(__dirname, '..', '/public')));
+app.use(express.static(path.join(__dirname, '../public')));
 
 app.get('/cool', (req, res) => res.send(cool()))
 
