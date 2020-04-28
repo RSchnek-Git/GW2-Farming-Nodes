@@ -61,6 +61,7 @@ class NodeList extends Component {
                         ))}
                     </ol>
                 </div>
+                <p id="copy-toast">Waypoint Copied!</p>
             </div>
         )
     }
