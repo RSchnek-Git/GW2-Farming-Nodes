@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {getAllThunk} from '../store/nodes'
 import {Link} from 'react-router-dom'
+import CopyToClipboard from './Functions'
 
 class NodeList extends Component {
     constructor(props) {
@@ -15,24 +16,16 @@ class NodeList extends Component {
 
     handleClick(event) {
         event.preventDefault()
-        const strToCopy = event.target.alt
-        const el = document.createElement('textarea')
-        el.value = strToCopy
-        el.setAttribute('readonly', '')
-        el.style = {position: 'absolute', left: '-9999px'}
-        document.body.appendChild(el)
-        el.select()
-        document.execCommand('copy')
-        document.body.removeChild(el)
+        CopyToClipboard(event.target.alt)
         event.target.src = "waypointT.png"
     }
 
     render() {
         const nodes = this.props.nodes
         return (
-            <div>
-                <nav className="sublink">
-                    <Link to="/nodes">
+            <div className="main">
+                <nav className="sublink-container">
+                    <Link to="/nodes" className="selected-link">
                         All
                     </Link>
                     <Link to="/iron">
@@ -42,7 +35,10 @@ class NodeList extends Component {
                         Platinum Only
                     </Link>
                 </nav>
-                <div>
+                <div className="body">
+                    <div className="start">
+                    <h4>Start at Rata Sum</h4>
+                    </div>
                     <ol>
                         {nodes.map(node => (
                             <li key={node.id}>
@@ -65,6 +61,7 @@ class NodeList extends Component {
                         ))}
                     </ol>
                 </div>
+                <p id="copy-toast">Waypoint Copied!</p>
             </div>
         )
     }
