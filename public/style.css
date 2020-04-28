@@ -57,7 +57,7 @@ a {
     margin-left: 1.33em;
 }
 
-#copy-toast {
+#copy-toastA, #copy-toastI, #copy-toastP {
     visibility: hidden;
     min-width: 250px;
     margin-left: -125px;
@@ -72,7 +72,19 @@ a {
     bottom: 30px;
 }
 
-#copy-toast.show {
+#copy-toastA.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+#copy-toastI.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+} 
+
+#copy-toastP.show {
     visibility: visible;
     -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
     animation: fadein 0.5s, fadeout 0.5s 2.5s;

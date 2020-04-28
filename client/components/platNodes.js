@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {getPlatinumThunk} from '../store/nodes'
 import {Link} from 'react-router-dom'
-import CopyToClipboard from './Functions'
+import copyToClipboard from './Functions'
 
 class NodeList extends Component {
     constructor(props){
@@ -16,7 +16,12 @@ class NodeList extends Component {
 
     handleClick(event) {
         event.preventDefault()
-        CopyToClipboard(event.target.alt)
+        copyToClipboard(event.target.alt)
+        let toast = document.getElementById('copy-toastP')
+        toast.className = 'show'
+        setTimeout(function() {
+            toast.className = toast.className.replace('show', '')
+        }, 3000)
         event.target.src = "waypointT.png"
     }
 
@@ -61,7 +66,7 @@ class NodeList extends Component {
                         ))}
                     </ol>
                 </div>
-                <p id="copy-toast">Waypoint Copied!</p>
+                <p id="copy-toastP">Waypoint Copied!</p>
             </div>
         )
     }

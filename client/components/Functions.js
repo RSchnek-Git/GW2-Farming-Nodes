@@ -1,4 +1,4 @@
-export default function CopyToClipboard(str) {
+export default function copyToClipboard(str) {
     const el = document.createElement('textarea')
     el.value = str
     el.setAttribute('readonly', '')
@@ -7,9 +7,4 @@ export default function CopyToClipboard(str) {
     el.select()
     document.execCommand('copy')
     document.body.removeChild(el)
-    let toast = document.getElementById('copy-toast')
-    toast.className = 'show'
-    setTimeout(function() {
-        toast.className = toast.className.replace('show', '')
-    }, 3000)
 }
