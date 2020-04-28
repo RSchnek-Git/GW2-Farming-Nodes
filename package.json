@@ -6,7 +6,8 @@
   "scripts": {
     "seed": "node seed.js",
     "start-dev": "NODE_ENV='development' webpack -w & NODE_ENV='development' npm run start-server",
-    "start-server": "nodemon server -e html,js,scss --ignore public --ignore client"
+    "start-server": "nodemon server -e html,js,scss --ignore public --ignore client",
+    "start": "node server"
   },
   "author": "Robert Schnek",
   "license": "ISC",
