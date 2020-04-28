@@ -6,7 +6,7 @@
   "scripts": {
     "build-client": "webpack",
     "build-client-watch": "webpack -w",
-    "deploy": "deploy",
+    "deploy": "script/deploy",
     "heroku-token": "script/encrypt-heroku-auth-token.js",
     "seed": "node seed.js",
     "test": "NODE_ENV='test' mocha \"./server/**/*.spec.js\" \"./client/**/*.spec.js\" \"./script/**/*.spec.js\" --require @babel/polyfill --require @babel/register",
