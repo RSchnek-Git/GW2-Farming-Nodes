@@ -1,3 +1,4 @@
+const cool = require('cool-ascii-faces')
 const express = require('express'); //express
 const app = express(); //app creation
 const path = require('path');
@@ -5,7 +6,10 @@ const path = require('path');
 const morgan = require('morgan'); //logging middleware
 app.use(morgan('dev')); //app using middleware
 
+app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, '..', '/public')));
+
+app.get('/cool', (req, res) => res.send(cool()))
 
 const bodyParser = require('body-parser'); //allows req.body to be used
 app.use(bodyParser.json()); //can parse json
