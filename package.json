@@ -11,7 +11,6 @@
     "build-client": "webpack",
     "build-client-watch": "webpack -w",
     "deploy": "script/deploy",
-    "heroku-token": "script/encrypt-heroku-auth-token.js",
     "seed": "node script/seed.js",
     "test": "NODE_ENV='test' mocha \"./server/**/*.spec.js\" \"./client/**/*.spec.js\" \"./script/**/*.spec.js\" --require @babel/polyfill --require @babel/register",
     "start-dev": "NODE_ENV='development' webpack -w & NODE_ENV='development' npm run start-server",
