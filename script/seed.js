@@ -1,4 +1,4 @@
-const {db, Nodes} = require('./server/db/models');
+const {db, Nodes} = require('../server/db/models');
 
 async function seed() {
     await db.sync({force: true})
