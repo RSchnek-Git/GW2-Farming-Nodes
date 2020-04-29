@@ -8,6 +8,10 @@
     padding-top: 40px;
 }
 
+body {
+    margin: 0;
+}
+
 a:hover {
     color: #83d6fc;
 }
